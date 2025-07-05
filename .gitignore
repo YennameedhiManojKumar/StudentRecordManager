@@ -1,0 +1,14 @@
+# Ignore compiled Java class files
+*.class
+
+# Ignore external libraries (optional, if you don’t want to upload the JDBC jar)
+lib/
+
+# Ignore IDE-specific folders
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# Ignore OS-specific files
+Thumbs.db
