@@ -60,5 +60,16 @@ CREATE TABLE students (
   course VARCHAR(100)
 );
 
+
+✅ Project Flow Summary:
+
+Main.java (user input)
+   ↓
+StudentDAO.java (logic)
+   ↓
+DBConnection.java (connect to DB)
+   ↓
+MySQL (student_db)
+
 👤 Author
 Yennameedhi Manoj Kumar

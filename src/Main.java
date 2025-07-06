@@ -1,7 +1,15 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        AuthDAO auth = new AuthDAO();
+        boolean isLoggedIn = auth.login();
+
+        if (!isLoggedIn) {
+            System.out.println("Exiting application...");
+            return;
+        }
+
         StudentDAO dao = new StudentDAO();
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -14,21 +22,18 @@ public class Main {
             System.out.println("4. Delete Student");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
-
             choice = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine();
 
             switch (choice) {
                 case 1 -> dao.addStudent();
                 case 2 -> dao.viewStudents();
                 case 3 -> dao.updateStudent();
                 case 4 -> dao.deleteStudent();
-                case 0 -> System.out.println("Exiting program.");
-                default -> System.out.println("Invalid choice, please try again.");
+                case 0 -> System.out.println("👋 Exiting...");
+                default -> System.out.println("⚠️ Invalid choice.");
             }
 
         } while (choice != 0);
-
-        sc.close();
     }
 }
