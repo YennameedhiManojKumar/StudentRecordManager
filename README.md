@@ -60,16 +60,16 @@ CREATE TABLE students (
   course VARCHAR(100)
 );
 
+## 🔐 Login System Added
 
-✅ Project Flow Summary:
+Before accessing the menu, users must log in with valid credentials.
 
-Main.java (user input)
-   ↓
-StudentDAO.java (logic)
-   ↓
-DBConnection.java (connect to DB)
-   ↓
-MySQL (student_db)
+Default:
+- Username: admin
+- Password: admin123
+
+(Stored in the MySQL `users` table)
+
 
 👤 Author
 Yennameedhi Manoj Kumar
