@@ -22,7 +22,9 @@ public class Main {
             System.out.println("4. Delete Student");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
+            
             choice = sc.nextInt();
+
             sc.nextLine();
 
             switch (choice) {
@@ -35,5 +37,7 @@ public class Main {
             }
 
         } while (choice != 0);
+
+        sc.close();
     }
 }
